@@ -1,0 +1,154 @@
+WEBVTT
+
+1
+00:00:00.100 --> 00:00:03.149
+Komplexe Reisezeit und Frequenz.
+
+2
+00:00:03.868 --> 00:00:10.003
+Gleiche komplexe Reisezeit von 225 Minuten bei Bahn und Flug.
+
+3
+00:00:09.953 --> 00:00:14.002
+Die Verkehrsfrequenz zählt Verkehrsvorgänge je Zeitraum.
+
+4
+00:00:14.002 --> 00:00:18.358
+Die komplexe Reisezeit umfasst Zugang, Warten, Beförderung,
+
+5
+00:00:18.358 --> 00:00:21.606
+Umstieg beziehungsweise Umschlag und Abgang.
+
+6
+00:00:21.606 --> 00:00:25.482
+Die reine Fahr- oder Flugzeit allein erfasst die Kette nicht,
+
+7
+00:00:25.482 --> 00:00:28.976
+gleiche Systemgrenzen machen Alternativen vergleichbar.
+
+8
+00:00:29.740 --> 00:00:35.124
+T gesamt ist gleich Zugang plus Warten plus Beförderung plus Umstieg plus
+
+9
+00:00:35.124 --> 00:00:35.641
+Abgang.
+
+10
+00:00:35.591 --> 00:00:39.301
+Bei mehreren Teilstrecken werden die Zeiten addiert.
+
+11
+00:00:39.301 --> 00:00:43.312
+Überlappende Tätigkeiten dürfen nicht doppelt gezählt werden.
+
+12
+00:00:44.068 --> 00:00:47.208
+Komplexe Reisezeit Bahn und Flug.
+
+13
+00:00:47.158 --> 00:00:52.236
+Zugang: Bahn 20 Minuten, Flug 45 Minuten.
+
+14
+00:00:52.236 --> 00:00:58.031
+Warten und Abfertigung: Bahn 10 Minuten, Flug 75 Minuten.
+
+15
+00:00:58.031 --> 00:01:03.695
+Beförderung: Bahn 180 Minuten, Flug 65 Minuten.
+
+16
+00:01:03.695 --> 00:01:08.148
+Abgang: Bahn 15 Minuten, Flug 40 Minuten.
+
+17
+00:01:08.148 --> 00:01:15.153
+Gesamt: Bahn 225 Minuten, Flug 225 Minuten.
+
+18
+00:01:15.916 --> 00:01:20.332
+Erwartete Wartezeit als halber Takt (Zufallsankunft).
+
+19
+00:01:20.282 --> 00:01:26.903
+Im didaktischen Beispiel beträgt die gesamte Reisezeit bei beiden Varianten 225
+
+20
+00:01:26.903 --> 00:01:27.574
+Minuten.
+
+21
+00:01:27.574 --> 00:01:32.131
+Der deutlich schnellere Flug erzeugt keinen Haus-zu-Haus-Zeitvorteil.
+
+22
+00:01:32.131 --> 00:01:36.588
+Kosten, Verlässlichkeit und Nutzbarkeit der Reisezeit können dennoch
+
+23
+00:01:36.588 --> 00:01:37.964
+unterschiedlich sein.
+
+24
+00:01:38.740 --> 00:01:44.077
+Bei einem gleichmäßigen Takt von 30 Minuten und zufälliger Ankunft beträgt die
+
+25
+00:01:44.077 --> 00:01:48.182
+erwartete Wartezeit unter vereinfachten Annahmen 15 Minuten.
+
+26
+00:01:48.132 --> 00:01:52.260
+Ein Takt von 10 Minuten reduziert sie auf 5 Minuten.
+
+27
+00:01:52.260 --> 00:01:55.999
+Wer den Fahrplan kennt und gezielt kurz vor Abfahrt ankommt,
+
+28
+00:01:55.999 --> 00:01:58.055
+erfüllt die Zufallsannahme nicht,
+
+29
+00:01:58.055 --> 00:02:01.856
+dann darf nicht automatisch mit halbem Takt gerechnet werden.
+
+30
+00:02:02.620 --> 00:02:07.009
+Zwei Angebote mit gleicher mittlerer Reisezeit können unterschiedlich
+
+31
+00:02:07.009 --> 00:02:08.091
+verlässlich sein.
+
+32
+00:02:08.041 --> 00:02:12.989
+Ein verpasster Anschluss verlängert die Reise um mindestens einen weiteren Takt.
+
+33
+00:02:12.989 --> 00:02:17.420
+Bei einem wichtigen Termin muss daher auch die Streuung beziehungsweise ein
+
+34
+00:02:17.420 --> 00:02:20.020
+sinnvoller Zeitpuffer berücksichtigt werden.
+
+35
+00:02:20.788 --> 00:02:25.692
+Im Güterverkehr gilt dieselbe Logik für Vorlauf, Terminalwartezeit,
+
+36
+00:02:25.692 --> 00:02:27.522
+Abfertigung und Nachlauf.
+
+37
+00:02:27.472 --> 00:02:32.536
+Eine tägliche Abfahrt kann für einen spät bereitgestellten Auftrag ungünstiger
+
+38
+00:02:32.536 --> 00:02:37.016
+sein als ein langsamerer, aber jederzeit verfügbarer Direkttransport.
+

@@ -5,7 +5,7 @@
     [/^karteikarten(?:\/(k\d+))?$/,m=>P.flashcards(m[1])],[/^ueben(?:\/(k\d+))?(?:\?(.*))?$/,m=>P.practice(m[1],m[2]||'')],[/^fehler$/,()=>P.mistakes()],
     [/^aufgaben(?:\/(k\d+))?$/,m=>P.tasks(m[1])],[/^probeklausur$/,()=>X.landing()],[/^probeklausur\/auto$/,()=>X.auto()],[/^probeklausur\/k$/,()=>X.k()],
     [/^ergebnis\/(\d+)$/,m=>X.result(m[1])],[/^zusammenfassungen$/,()=>P.summaries()],[/^videos$/,()=>P.videos()],[/^glossar$/,()=>P.glossary()],
-    [/^fortschritt$/,()=>P.progress()],[/^suche\/(.*)$/,m=>P.search(m[1])]];
+    [/^interaktiv$/,()=>P.interactive()],[/^fortschritt$/,()=>P.progress()],[/^suche\/(.*)$/,m=>P.search(m[1])]];
   function render(){let path=location.hash.replace(/^#\/?/,'');let anchor=null;
     const ai=path.indexOf('#');if(ai>=0){anchor=path.slice(ai+1);path=path.slice(0,ai);}
     if(!/^probeklausur\/|^ergebnis/.test(path))Exam.stop();

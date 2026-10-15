@@ -1,0 +1,150 @@
+WEBVTT
+
+1
+00:00:00.100 --> 00:00:03.292
+Wasser, Luft und Sendungsverfolgung.
+
+2
+00:00:04.012 --> 00:00:08.389
+Telematik in Schifffahrt, Luftfahrt und Sendungsverfolgung.
+
+3
+00:00:08.339 --> 00:00:13.736
+RIS und DoRIS: Erfasste oder genutzte Information Fahrwasser, Verkehrslage,
+
+4
+00:00:13.736 --> 00:00:19.420
+Meldungen und Reiseinformationen, Zweck Sichere und planbare Binnenschifffahrt.
+
+5
+00:00:19.420 --> 00:00:23.315
+AIS: Erfasste oder genutzte Information Identität,
+
+6
+00:00:23.315 --> 00:00:28.613
+Position und Bewegung von Schiffen, Zweck Lagebild und Koordination.
+
+7
+00:00:28.613 --> 00:00:33.866
+ILS: Erfasste oder genutzte Information Führungsinformation beim Anflug,
+
+8
+00:00:33.866 --> 00:00:37.076
+Zweck Unterstützung des Instrumentenanflugs.
+
+9
+00:00:37.076 --> 00:00:42.738
+TCAS: Erfasste oder genutzte Information Information über nahe Luftfahrzeuge,
+
+10
+00:00:42.738 --> 00:00:46.047
+Zweck Warnung und Vermeidung von Kollisionen.
+
+11
+00:00:46.047 --> 00:00:50.722
+Tracking und Tracing: Erfasste oder genutzte Information Positionen und
+
+12
+00:00:50.722 --> 00:00:55.331
+Ereignisse einer Sendung, Zweck Status und Verlauf der Transportkette.
+
+13
+00:00:56.092 --> 00:01:00.235
+Telematikanwendungen je Verkehrsträger und für die Sendung.
+
+14
+00:01:00.185 --> 00:01:05.086
+River Information Services bündeln Dienste für Verkehr und Transport auf
+
+15
+00:01:05.086 --> 00:01:06.448
+Binnenwasserstraßen.
+
+16
+00:01:06.448 --> 00:01:09.497
+Sie unterstützen Planung und sichere Navigation,
+
+17
+00:01:09.497 --> 00:01:13.245
+sie ersetzen nicht die erforderliche nautische Beurteilung.
+
+18
+00:01:13.245 --> 00:01:18.765
+Das viadonau-Handbuch behandelt die technische und organisatorische Rolle von
+
+19
+00:01:18.765 --> 00:01:19.052
+RIS.
+
+20
+00:01:19.804 --> 00:01:24.272
+Tracking (aktueller Ort) und Tracing (Ereignisverlauf).
+
+21
+00:01:24.222 --> 00:01:29.418
+AIS ist ein Identifikations- und Positionsinformationssystem.
+
+22
+00:01:29.418 --> 00:01:34.639
+Ein angezeigter Standort sagt nicht allein, ob die gesamte Route befahrbar ist.
+
+23
+00:01:34.639 --> 00:01:40.026
+ILS unterstützt einen Instrumentenanflug, TCAS besitzt eine andere Aufgabe,
+
+24
+00:01:40.026 --> 00:01:43.545
+nämlich die Vermeidung gefährlicher Annäherungen.
+
+25
+00:01:43.545 --> 00:01:47.412
+Mobile Check-in-Prozesse dienen dagegen der Abfertigung.
+
+26
+00:01:48.172 --> 00:01:53.578
+Tracking beantwortet, wo eine Sendung beziehungsweise Einheit aktuell ist.
+
+27
+00:01:53.528 --> 00:01:58.645
+Tracing rekonstruiert den Verlauf anhand von Ereignissen, etwa Übergabe,
+
+28
+00:01:58.645 --> 00:02:00.351
+Umschlag und Zustellung.
+
+29
+00:02:00.351 --> 00:02:04.362
+Eine GPS-Position eines Lkw beweist nicht automatisch,
+
+30
+00:02:04.362 --> 00:02:07.408
+dass eine bestimmte Sendung in ihm liegt.
+
+31
+00:02:07.408 --> 00:02:11.504
+Dafür braucht es eine konsistente Zuordnung von Sendung,
+
+32
+00:02:11.504 --> 00:02:13.332
+Ladeeinheit und Fahrzeug.
+
+33
+00:02:14.092 --> 00:02:18.552
+Eine Sendung kann am richtigen Ort sein und trotzdem verspätet verfügbar
+
+34
+00:02:18.552 --> 00:02:22.206
+werden, etwa weil die Dokumentation oder Abfertigung fehlt.
+
+35
+00:02:22.156 --> 00:02:26.010
+Prognosen und physischer Status sind zu unterscheiden.
+
+36
+00:02:26.010 --> 00:02:28.334
+Ein Zeitstempel braucht Zeitzone,
+
+37
+00:02:28.334 --> 00:02:32.560
+eindeutige Einheit und eine klare Bedeutung des Ereignisses.
+

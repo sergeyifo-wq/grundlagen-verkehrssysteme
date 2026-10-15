@@ -1,0 +1,114 @@
+WEBVTT
+
+1
+00:00:00.100 --> 00:00:03.110
+Rastersystem und Hub-and-Spoke.
+
+2
+00:00:03.820 --> 00:00:08.801
+Sechs Knoten: Vollständiges Raster mit 15 ungerichteten Kanten,
+
+3
+00:00:08.801 --> 00:00:10.619
+Sternnetz mit 5 Kanten.
+
+4
+00:00:10.569 --> 00:00:14.723
+Weniger Kanten bedeuten nicht automatisch weniger Fahrten.
+
+5
+00:00:14.723 --> 00:00:20.074
+Ein vollständiges Rastersystem verbindet jeden Knoten direkt mit jedem anderen.
+
+6
+00:00:20.074 --> 00:00:24.827
+Das bietet kurze direkte Wege und vermeidet einen zentralen Umschlag.
+
+7
+00:00:24.827 --> 00:00:29.332
+Mit wachsender Knotenzahl steigt jedoch die Zahl der Relationen stark.
+
+8
+00:00:29.332 --> 00:00:33.811
+Bei schwachen Einzelströmen bleiben Fahrzeuge schlecht ausgelastet.
+
+9
+00:00:34.564 --> 00:00:39.787
+Zahl der ungerichteten Kanten im Raster und im Stern bei wachsender Knotenzahl.
+
+10
+00:00:39.737 --> 00:00:44.998
+Im Hub-and-Spoke-System bündeln Außenknoten ihre Ströme an einem Hub.
+
+11
+00:00:44.998 --> 00:00:50.050
+Dort werden Sendungen sortiert oder Reisende auf Anschlussverbindungen verteilt.
+
+12
+00:00:50.050 --> 00:00:54.360
+Das erlaubt größere gebündelte Verkehre, erzeugt aber Umwege,
+
+13
+00:00:54.360 --> 00:00:57.680
+Umstiege und Abhängigkeit vom zentralen Knoten.
+
+14
+00:00:58.444 --> 00:01:01.375
+Raster: n mal n minus 1 geteilt durch 2.
+
+15
+00:01:01.375 --> 00:01:02.621
+Stern: n minus 1.
+
+16
+00:01:02.621 --> 00:01:07.457
+Gilt für ungerichtete Verbindungen und einen der n Knoten als Hub.
+
+17
+00:01:07.407 --> 00:01:13.591
+Bei gerichteten Relationen: n mal n minus 1 beziehungsweise 2 mal n minus 1.
+
+18
+00:01:14.356 --> 00:01:18.941
+Bei sechs Knoten hat das Raster 15 und der Stern 5 Kanten.
+
+19
+00:01:18.891 --> 00:01:23.813
+Ein einzelner Hub kann dadurch die Zahl notwendiger Verbindungen reduzieren.
+
+20
+00:01:23.813 --> 00:01:26.447
+Daraus folgt aber nicht, dass Fahrleistung,
+
+21
+00:01:26.447 --> 00:01:31.287
+Reisezeit oder Kosten im gleichen Verhältnis sinken: Im Stern läuft ein Verkehr
+
+22
+00:01:31.287 --> 00:01:33.921
+zwischen zwei Außenknoten über zwei Kanten,
+
+23
+00:01:33.921 --> 00:01:37.290
+auf stark belasteten Kanten sind mehrere Fahrten nötig.
+
+24
+00:01:38.044 --> 00:01:42.460
+Hub-Systeme müssen auf Wellen und Spitzenlasten abgestimmt werden.
+
+25
+00:01:42.410 --> 00:01:46.759
+Ein verspäteter Zulauf kann viele Anschlüsse beeinträchtigen.
+
+26
+00:01:46.759 --> 00:01:50.275
+Ein ausgefallener Hub trifft das ganze System.
+
+27
+00:01:50.275 --> 00:01:55.509
+Mehrere Hubs oder direkte Zusatzverbindungen können die Robustheit verbessern,
+
+28
+00:01:55.509 --> 00:01:58.126
+erhöhen jedoch Aufwand und Komplexität.
+

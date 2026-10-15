@@ -1,0 +1,154 @@
+WEBVTT
+
+1
+00:00:00.100 --> 00:00:02.797
+Kapazität und Auslastung.
+
+2
+00:00:03.508 --> 00:00:06.662
+Gewichts- und Volumenauslastung desselben Lkw.
+
+3
+00:00:06.662 --> 00:00:11.531
+Kapazität ist die maximal mögliche Nutzung einer definierten Ressource.
+
+4
+00:00:11.481 --> 00:00:14.769
+Bei Fahrzeugen kann sie als Sitzplätze, Tonnen,
+
+5
+00:00:14.769 --> 00:00:18.056
+Kubikmeter oder Ladeeinheiten angegeben werden.
+
+6
+00:00:18.056 --> 00:00:22.210
+Bei Infrastruktur ist sie häufig ein Durchsatz pro Zeit.
+
+7
+00:00:22.210 --> 00:00:27.457
+Eine Kapazitätsangabe braucht daher eine Einheit und Betriebsbedingungen.
+
+8
+00:00:28.228 --> 00:00:33.427
+Auslastung ist gleich tatsächlich genutzte Kapazität geteilt durch verfügbare
+
+9
+00:00:33.427 --> 00:00:34.102
+Kapazität.
+
+10
+00:00:34.052 --> 00:00:37.217
+Als Anteil oder Prozentwert angeben.
+
+11
+00:00:37.217 --> 00:00:41.579
+Gewicht, Volumen, Sitzplätze und Zeitraum nicht vermischen.
+
+12
+00:00:42.340 --> 00:00:48.809
+Ein Lkw mit 20 Tonnen Nutzlast und 80 Kubikmeter Ladevolumen transportiert 10
+
+13
+00:00:48.809 --> 00:00:50.910
+Tonnen mit 72 Kubikmeter.
+
+14
+00:00:50.860 --> 00:00:56.732
+Die Gewichtsauslastung beträgt 50 Prozent, die Volumenauslastung 90 Prozent.
+
+15
+00:00:56.732 --> 00:01:01.185
+Er ist fast raumvoll, obwohl die Gewichtsauslastung niedrig ist.
+
+16
+00:01:01.185 --> 00:01:03.551
+Mehr schwere Ladung ist nur möglich,
+
+17
+00:01:03.551 --> 00:01:06.836
+wenn sie räumlich und organisatorisch hineinpasst.
+
+18
+00:01:07.588 --> 00:01:12.333
+Streckengewichtete Auslastung ist gleich tatsächliche Tonnenkilometer geteilt
+
+19
+00:01:12.333 --> 00:01:14.921
+durch angebotene Nutzlast-Tonnenkilometer.
+
+20
+00:01:14.871 --> 00:01:19.948
+Angebotene Nutzlast-Tonnenkilometer ist gleich Summe aus zulässiger Nutzlast je
+
+21
+00:01:19.948 --> 00:01:21.876
+Abschnitt mal Abschnittslänge.
+
+22
+00:01:22.636 --> 00:01:28.081
+Die Tour aus Abschnitt 4.2 hat durchgehend 20 Tonnen Kapazität.
+
+23
+00:01:28.031 --> 00:01:34.177
+Das Angebot beträgt 20 mal 200 ist gleich 4.000 Nutzlast-Tonnenkilometer.
+
+24
+00:01:34.177 --> 00:01:41.537
+Die Auslastung über die ganze Tour beträgt 1.240 geteilt durch 4.000 ist gleich
+
+25
+00:01:41.537 --> 00:01:42.562
+31 Prozent.
+
+26
+00:01:42.562 --> 00:01:45.772
+Die ungewichtete Mittelung von 60 Prozent,
+
+27
+00:01:45.772 --> 00:01:50.512
+40 Prozent und 0 Prozent ergibt 33,3 Prozent und ignoriert die
+
+28
+00:01:50.512 --> 00:01:53.187
+unterschiedlichen Abschnittslängen.
+
+29
+00:01:53.956 --> 00:01:57.874
+Im Personenverkehr wird der gleiche Gedanke als Verhältnis von
+
+30
+00:01:57.874 --> 00:02:01.666
+Personenkilometer zu angebotenen Platzkilometern angewendet.
+
+31
+00:02:01.616 --> 00:02:06.968
+Ob nur Sitzplätze oder auch Stehplätze zählen, muss die Aufgabe festlegen.
+
+32
+00:02:06.968 --> 00:02:11.699
+Bei einer Flotte sind Zeitverfügbarkeit und Kilometerleistung außerdem eigene
+
+33
+00:02:11.699 --> 00:02:15.939
+Aspekte, die nicht durch eine einzige Auslastungszahl erfasst werden.
+
+34
+00:02:16.708 --> 00:02:21.682
+Ein fast voller Lkw kann auf einer schlechten Tour sehr viele Umwegkilometer
+
+35
+00:02:21.682 --> 00:02:22.140
+fahren.
+
+36
+00:02:22.090 --> 00:02:27.113
+Hohe Ladungsauslastung bedeutet daher nicht automatisch geringe Gesamtkosten
+
+37
+00:02:27.113 --> 00:02:29.030
+oder geringe Umweltbelastung.
+
+38
+00:02:29.030 --> 00:02:34.720
+Prüfe zusätzlich Leerfahrten, Strecke, Zeit und tatsächliche Verkehrsleistung.
+

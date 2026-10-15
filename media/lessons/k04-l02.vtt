@@ -1,0 +1,130 @@
+WEBVTT
+
+1
+00:00:00.100 --> 00:00:02.758
+Wenn die Ladung unterwegs wechselt.
+
+2
+00:00:03.460 --> 00:00:07.992
+Beispieltour: 12 Tonnen ab Depot, 4 Tonnen bei A entladen,
+
+3
+00:00:07.992 --> 00:00:11.040
+8 Tonnen bei B entladen, Rücklauf leer.
+
+4
+00:00:10.990 --> 00:00:14.597
+Entfernung und Ladung werden je Abschnitt verknüpft.
+
+5
+00:00:14.597 --> 00:00:18.113
+Bei einer Tour verändert sich die Menge im Fahrzeug.
+
+6
+00:00:18.113 --> 00:00:21.472
+Berechne die Verkehrsleistung abschnittsweise.
+
+7
+00:00:21.472 --> 00:00:26.563
+Verwende die Ladung, die auf dem jeweiligen Abschnitt tatsächlich an Bord ist.
+
+8
+00:00:26.563 --> 00:00:31.693
+Anfangsladung mal gesamte Rundtour liefert fast immer ein falsches Ergebnis.
+
+9
+00:00:32.452 --> 00:00:35.488
+Tour mit wechselnder Ladung je Abschnitt.
+
+10
+00:00:35.438 --> 00:00:40.028
+Depot nach A: Länge 50 Kilometer, Ladung 12 Tonnen,
+
+11
+00:00:40.028 --> 00:00:42.638
+Leistung 600 Tonnenkilometer.
+
+12
+00:00:42.638 --> 00:00:49.813
+A nach B: Länge 80 Kilometer, Ladung 8 Tonnen, Leistung 640 Tonnenkilometer.
+
+13
+00:00:49.813 --> 00:00:56.388
+B nach Depot: Länge 70 Kilometer, Ladung 0 Tonnen, Leistung 0 Tonnenkilometer.
+
+14
+00:00:56.388 --> 00:01:02.436
+Gesamttour: Länge 200 Kilometer, Ladung 12 Tonnen ausgeliefert,
+
+15
+00:01:02.436 --> 00:01:05.412
+Leistung 1.240 Tonnenkilometer.
+
+16
+00:01:06.172 --> 00:01:10.314
+Die Fahrleistung beträgt 200 Fahrzeugkilometer,
+
+17
+00:01:10.314 --> 00:01:14.104
+die Verkehrsleistung 1.240 Tonnenkilometer.
+
+18
+00:01:14.054 --> 00:01:18.702
+Das einmalige Aufkommen der ausgelieferten Sendungen ist 12 Tonnen.
+
+19
+00:01:18.702 --> 00:01:25.640
+Die mittlere Transportentfernung der Güter beträgt 1.240 geteilt durch 12 ist
+
+20
+00:01:25.640 --> 00:01:27.712
+gleich 103,3 Kilometer.
+
+21
+00:01:27.712 --> 00:01:30.686
+Die 4 Tonnen nach A fahren 50 Kilometer,
+
+22
+00:01:30.686 --> 00:01:33.734
+die 8 Tonnen nach B fahren 130 Kilometer,
+
+23
+00:01:33.734 --> 00:01:36.931
+beide Rechenwege liefern dasselbe Ergebnis.
+
+24
+00:01:37.684 --> 00:01:43.507
+Ein Bus fährt 20 Kilometer mit 30 Personen und weitere 10 Kilometer mit 10
+
+25
+00:01:43.507 --> 00:01:48.858
+Personen: 30 mal 20 plus 10 mal 10 ist gleich 700 Personenkilometer.
+
+26
+00:01:48.808 --> 00:01:52.167
+Die Fahrleistung ist 30 Fahrzeugkilometer.
+
+27
+00:01:52.167 --> 00:01:56.486
+Für die Zahl beförderter Personen muss bekannt sein, wer neu einsteigt,
+
+28
+00:01:56.486 --> 00:02:00.318
+die Summe der Besetzungen allein beantwortet diese Frage nicht.
+
+29
+00:02:01.084 --> 00:02:04.043
+Nutze eine kleine Abschnittstabelle auch dann,
+
+30
+00:02:04.043 --> 00:02:06.229
+wenn die Rechnung leicht aussieht.
+
+31
+00:02:06.179 --> 00:02:10.651
+Sie verhindert, dass Entfernungen mehrfach gezählt oder Rückfahrten mit der
+
+32
+00:02:10.651 --> 00:02:12.560
+Hinfahrtsladung bewertet werden.
+

@@ -4,7 +4,7 @@
   function h(tag,attrs,...kids){const e=document.createElement(tag);
     for(const[k,v]of Object.entries(attrs||{})){if(v==null||v===false)continue;
       if(k.startsWith('on'))e.addEventListener(k.slice(2),v);else if(k==='html')e.innerHTML=v;else if(k==='class')e.className=v;else e.setAttribute(k,v===true?'':v);}
-    for(const k of kids.flat()){if(k==null||k===false)continue;e.append(k.nodeType?k:document.createTextNode(k));}return e;}
+    for(const k of kids.flat(Infinity)){if(k==null||k===false)continue;e.append(k.nodeType?k:document.createTextNode(k));}return e;}
   const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;};
   const norm=s=>String(s).trim().toLowerCase().replace(/\s+/g,' ');
   function parseNum(s){s=String(s).trim().replace(/\s|\u00a0/g,'');if(!s)return NaN;
@@ -27,7 +27,7 @@
       const z=e.target.closest('.zone,.pool');if(z&&sel){place(sel,z);sel.setAttribute('aria-pressed','false');sel.focus();sel=null;}});
     root.addEventListener('keydown',e=>{const z=e.target.closest('.zone,.pool');if(z&&!e.target.closest('.chip')&&(e.key==='Enter'||e.key===' ')){e.preventDefault();z.click();}});
     function place(c,z){if(root.dataset.locked)return;const slot=z.querySelector('.slot')||z;
-      if(z.dataset.cap==='1'){const old=slot.querySelector('.chip');if(old&&old!==c)root.querySelector('.pool .slot,.pool').append(old);}
+      if(z.dataset.cap==='1'){const old=slot.querySelector('.chip');if(old&&old!==c){old.classList.remove('ok','err');root.querySelector('.pool .slot,.pool').append(old);}}
       slot.append(c);c.classList.remove('ok','err');root.dispatchEvent(new Event('change'));}
   }
   const chip=(text,k)=>h('button',{type:'button',class:'chip',draggable:'true','data-k':k,'aria-pressed':'false'},text);
@@ -112,11 +112,10 @@
       r.reveal(res);Store.record(item.id,res.ok);btn.remove();onDone&&onDone(res.ok);};
     r=renderItem(item,{instant:true,autoCheck:go});btn.onclick=go;r.el.append(h('div',{class:'row',style:'margin-top:16px'},btn));return r.el;
   }
-  /* Video: Klick lädt erst den iframe (lazy, youtube-nocookie) */
-  function video(v){const box=h('div',{class:'video'});
-    const b=h('button',{type:'button',class:'vthumb','aria-label':'Video laden: '+v.title},h('span',{class:'play'},'▶'),h('span',{},'Video laden'),h('span',{class:'note'},'Lädt YouTube (nocookie) erst nach Klick'));
-    b.onclick=()=>{box.innerHTML='';box.append(h('iframe',{src:v.embed+'?rel=0',title:v.title,loading:'lazy',allow:'encrypted-media; picture-in-picture',allowfullscreen:true}));};
-    box.append(b);return h('div',{class:'panel'},h('span',{class:'label'},v.channel+' · '+v.language.toUpperCase()),h('h3',{},v.title),box,
-      h('p',{class:'note'},v.why),h('a',{href:v.url,target:'_blank',rel:'noopener',class:'label'},'Quelle: YouTube ↗'));}
-  window.UI={h,esc,shuffle,renderItem,practiceCard,video,correctText,chapterLabel,parseNum,TYPE};
+  /* Eigenes Lernvideo (selbst gehostet): <video> mit deutscher Untertitelspur und Poster */
+  function ownVideo(lid){const v=(USS_DATA.localVideos||{})[lid];if(!v)return null;
+    return h('video',{controls:true,preload:'metadata',playsinline:true,poster:v.poster||null,class:'ownvideo','aria-label':'Lernvideo '+lid},
+      h('source',{src:v.mp4,type:'video/mp4'}),v.vtt?h('track',{kind:'subtitles',src:v.vtt,srclang:'de',label:'Deutsch',default:true}):null);}
+  const dur=s=>s?Math.floor(s/60)+':'+String(Math.round(s%60)).padStart(2,'0'):'';
+  window.UI={dnd:makeDnd,ownVideo,dur,h,esc,shuffle,renderItem,practiceCard,correctText,chapterLabel,parseNum,TYPE};
 })();

@@ -1,0 +1,122 @@
+WEBVTT
+
+1
+00:00:00.100 --> 00:00:03.904
+Direktverkehr, Tourenverkehr und Systemverkehr.
+
+2
+00:00:04.612 --> 00:00:09.361
+Direkt verbindet zwei Orte, eine Tour verbindet mehrere Bedienpunkte,
+
+3
+00:00:09.361 --> 00:00:13.078
+ein System koordiniert Teilverkehre über einen Knoten.
+
+4
+00:00:13.028 --> 00:00:17.780
+Direktverkehr verbindet Quelle und Senke ohne Wechsel des Verkehrsmittels.
+
+5
+00:00:17.780 --> 00:00:22.338
+Typische Beispiele sind eine Komplettladung oder ein Nonstop-Flug.
+
+6
+00:00:22.338 --> 00:00:25.094
+Er vermeidet Umschlag und kann schnell sein,
+
+7
+00:00:25.094 --> 00:00:29.980
+benötigt aber auf der konkreten Relation genug Nachfrage oder eine ausreichend
+
+8
+00:00:29.980 --> 00:00:31.608
+hohe Zahlungsbereitschaft.
+
+9
+00:00:32.380 --> 00:00:36.705
+Tourenverkehr bedient mehrere Quellen oder Senken nacheinander.
+
+10
+00:00:36.655 --> 00:00:41.134
+Eine Sammel- oder Verteiltour bündelt Aufträge in einem Fahrzeug.
+
+11
+00:00:41.134 --> 00:00:45.922
+Ein Milk Run versorgt oder entsorgt mehrere Standorte in einer geplanten
+
+12
+00:00:45.922 --> 00:00:46.720
+Reihenfolge.
+
+13
+00:00:46.720 --> 00:00:51.504
+Der Vorteil geringerer Fahrzeugzahl wird gegen zusätzliche Fahrstrecke und die
+
+14
+00:00:51.504 --> 00:00:54.142
+Zeitfenster der einzelnen Kunden abgewogen.
+
+15
+00:00:54.916 --> 00:01:00.013
+Systemverkehr nutzt ein organisiertes Netzwerk mit abgestimmten Verbindungen,
+
+16
+00:01:00.013 --> 00:01:02.197
+häufig mit Umschlag oder Umstieg.
+
+17
+00:01:02.147 --> 00:01:06.548
+Paketnetze, Taktknoten und Netzwerkflüge sind Beispiele.
+
+18
+00:01:06.548 --> 00:01:10.313
+Nicht jede einzelne Verbindung des Systems muss indirekt sein,
+
+19
+00:01:10.313 --> 00:01:14.139
+entscheidend ist die netzweit koordinierte Leistungserstellung.
+
+20
+00:01:14.908 --> 00:01:17.669
+Wer zehn kleine Sendungen zusammenführt,
+
+21
+00:01:17.669 --> 00:01:20.913
+kann einen größeren Hauptlauf besser auslasten.
+
+22
+00:01:20.863 --> 00:01:25.277
+Dafür entstehen Kosten für Einsammeln, Sortieren und Verteilen.
+
+23
+00:01:25.277 --> 00:01:29.728
+Eine Entscheidung vergleicht die Einsparung im Hauptlauf mit dem zusätzlichen
+
+24
+00:01:29.728 --> 00:01:31.462
+Aufwand an den Schnittstellen.
+
+25
+00:01:31.462 --> 00:01:34.428
+Eine höhere Auslastung ist nur dann hilfreich,
+
+26
+00:01:34.428 --> 00:01:38.298
+wenn Lieferfristen und Kapazitätsgrenzen eingehalten werden.
+
+27
+00:01:39.052 --> 00:01:43.833
+Eine Tour ist nicht schon deshalb multimodal, weil sie mehrere Halte hat.
+
+28
+00:01:43.783 --> 00:01:49.121
+Ein Lkw, der fünf Kunden besucht, bleibt beim Verkehrsträger Straße.
+
+29
+00:01:49.121 --> 00:01:53.800
+Mehrere Teilstrecken und mehrere Verkehrsträger sind unterschiedliche
+
+30
+00:01:53.800 --> 00:01:54.681
+Sachverhalte.
+

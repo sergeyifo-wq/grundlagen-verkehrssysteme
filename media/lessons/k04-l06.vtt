@@ -1,0 +1,146 @@
+WEBVTT
+
+1
+00:00:00.100 --> 00:00:03.787
+Intensität, Elastizität und Entkopplung.
+
+2
+00:00:04.492 --> 00:00:09.494
+Transportelastizität und Entkopplung bei positivem BIP-Wachstum.
+
+3
+00:00:09.444 --> 00:00:13.702
+Die Folien verwenden Verkehrsintensität in zwei Varianten.
+
+4
+00:00:13.702 --> 00:00:18.281
+Verkehrsleistung geteilt durch Gütermenge misst den Transportaufwand je Tonne
+
+5
+00:00:18.281 --> 00:00:19.649
+und hat die Einheit km,
+
+6
+00:00:19.649 --> 00:00:23.871
+bei identischer Abgrenzung entspricht dies der mittleren Verkehrsweite.
+
+7
+00:00:23.871 --> 00:00:28.752
+Verkehrsleistung geteilt durch reales BIP misst die Transportleistung je
+
+8
+00:00:28.752 --> 00:00:34.040
+wirtschaftlicher Leistung, beispielsweise Tonnenkilometer pro Euro realem BIP.
+
+9
+00:00:34.804 --> 00:00:39.616
+Transportelastizität ist gleich prozentuale Änderung der Tonnenkilometer
+
+10
+00:00:39.616 --> 00:00:42.957
+geteilt durch prozentuale Änderung des realen BIP.
+
+11
+00:00:42.907 --> 00:00:48.168
+Veränderungen müssen denselben Zeitraum und konsistente Vergleichsbasis haben.
+
+12
+00:00:48.168 --> 00:00:52.243
+Bei BIP-Änderung 0 ist der Quotient nicht definiert.
+
+13
+00:00:52.996 --> 00:00:58.680
+Wächst die Verkehrsleistung um 6 Prozent und das reale BIP um 3 Prozent,
+
+14
+00:00:58.680 --> 00:01:00.732
+beträgt die Elastizität 2.
+
+15
+00:01:00.682 --> 00:01:04.003
+Der Verkehr wächst relativ doppelt so schnell.
+
+16
+00:01:04.003 --> 00:01:10.744
+Bei plus 2 Prozent Tonnenkilometer und plus 4 Prozent realem BIP beträgt sie
+
+17
+00:01:10.744 --> 00:01:11.099
+0,5.
+
+18
+00:01:11.099 --> 00:01:15.796
+Das ist bei positivem Wachstum beider Größen ein Fall relativer Entkopplung:
+
+19
+00:01:15.796 --> 00:01:19.875
+Die Verkehrsintensität sinkt, die Verkehrsleistung wächst dennoch.
+
+20
+00:01:20.644 --> 00:01:24.723
+Absolute Entkopplung liegt vor, wenn die Verkehrsleistung sinkt,
+
+21
+00:01:24.723 --> 00:01:26.636
+während die Wirtschaft wächst.
+
+22
+00:01:26.586 --> 00:01:32.836
+Beispiel: -2 Prozent Tonnenkilometer bei plus 4 Prozent realem BIP.
+
+23
+00:01:32.836 --> 00:01:37.374
+Eine negative Elastizität allein reicht jedoch nicht zur Einordnung: Bei
+
+24
+00:01:37.374 --> 00:01:42.354
+schrumpfendem BIP kehren sich die Vorzeichen und ihre Bedeutung verändert sich.
+
+25
+00:01:42.354 --> 00:01:45.544
+Nenne daher immer beide Wachstumsraten.
+
+26
+00:01:46.300 --> 00:01:54.424
+BIP von 100 auf 104, Tonnenkilometer von 100 auf 102: Intensität vorher 1,
+
+27
+00:01:54.424 --> 00:01:59.583
+danach 102 geteilt durch 104 ist gleich 0,9808.
+
+28
+00:01:59.533 --> 00:02:03.388
+Sie sinkt um rund 1,92 Prozent.
+
+29
+00:02:03.388 --> 00:02:08.465
+Die einfache Differenz der Wachstumsraten von -2 Prozentpunkten ist nur eine
+
+30
+00:02:08.465 --> 00:02:11.538
+Näherung für die relative Intensitätsänderung.
+
+31
+00:02:12.292 --> 00:02:17.100
+Eine globale Intensität kann durch Branchenstruktur, Transportentfernungen,
+
+32
+00:02:17.100 --> 00:02:19.664
+Handel und Outsourcing verändert werden.
+
+33
+00:02:19.614 --> 00:02:23.855
+Eine verkehrsträgerspezifische Elastizität kann auf veränderte Anteile
+
+34
+00:02:23.855 --> 00:02:28.338
+hinweisen, ist aber noch kein kausaler Nachweis einer Verkehrsverlagerung.
+
+35
+00:02:28.338 --> 00:02:31.857
+Inflation ist durch das reale BIP ausgeschlossen,
+
+36
+00:02:31.857 --> 00:02:35.018
+andere Strukturänderungen bleiben enthalten.
+

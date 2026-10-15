@@ -3,7 +3,7 @@
   const D=USS_DATA,{h,esc,shuffle}=UI;
   const CH=D.chapters.chapters, LS=D.lessons.lessons, byId=Object.fromEntries(LS.map(l=>[l.id,l]));
   const chap=id=>CH.find(c=>c.id===id);
-  const items=D.practice.items, cards=D.flashcards.cards, vids=D.videos.videos;
+  const items=D.practice.items, cards=D.flashcards.cards, LV=D.localVideos||{};
   const P={};
   const pct=(a,b)=>b?Math.round(100*a/b):0;
   function chapStats(c){const ls=c.lessons.length,done=c.lessons.filter(Store.isLessonDone).length;
@@ -30,7 +30,7 @@
   function chapCard(c){const s=chapStats(c);return h('a',{class:'card',href:'#/kapitel/'+c.id},h('span',{class:'label'},`Kapitel ${String(c.no).padStart(2,'0')} / ${CH.length}`),h('h3',{},c.title),h('p',{},`${s.ls} Lektionen · ${s.its} Übungen`),bar(pct(s.done,s.ls)));}
   P.chapters=()=>[h('h1',{},'Kapitel'),h('div',{class:'grid'},CH.map(chapCard))];
   P.chapter=(id)=>{const c=chap(id);if(!c)return P.notfound();const s=D.summaries.summaries.find(x=>x.chapter===id),st=chapStats(c);
-    const v=vids.filter(v=>v.chapters.includes(id));
+    const v=c.lessons.filter(x=>LV[x]);
     return [h('span',{class:'label'},`Kapitel ${String(c.no).padStart(2,'0')} / ${CH.length} · Status: ${st.done===st.ls?'abgeschlossen':st.done?'in Arbeit':'offen'}`),h('h1',{style:'font-size:56px'},c.title),
       h('p',{style:'max-width:760px'},c.intro),h('div',{class:'gap',style:'border-color:var(--bh-accent)'},h('span',{class:'label'},'Leitfrage'),h('p',{},c.guidingQuestion)),
       h('div',{class:'panel'},h('span',{class:'label'},'Lernziele'),h('p',{},c.goals)),
@@ -38,7 +38,7 @@
         return h('a',{class:'card',href:'#/lektion/'+lid},h('span',{class:'label'},`${c.no}.${i+1} ${Store.isLessonDone(lid)?'· ✓ gelesen':''}`),h('h3',{},l.title));}))),
       h('section',{class:'sec row'},h('a',{class:'btn',href:'#/ueben/'+id},`Üben (${st.its})`),h('a',{class:'btn btn--ghost',href:'#/karteikarten/'+id},`Karteikarten (${st.fc})`),h('a',{class:'btn btn--ghost',href:'#/zusammenfassungen#'+id},'Zusammenfassung'),
         s&&s.trainingTasks.length?h('a',{class:'btn btn--ghost',href:'#/aufgaben/'+id},'Lerntraining '+s.trainingTasks.join(', ')):null),
-      v.length?h('section',{class:'sec'},h('span',{class:'label'},'Videos zum Kapitel'),h('div',{class:'grid grid--2'},v.map(UI.video))):null];};
+      v.length?h('section',{class:'sec'},h('span',{class:'label'},`Lernvideos zum Kapitel · ${v.length}`),h('div',{class:'grid'},v.map(x=>vidCard(x)))):null];};
 
   P.lesson=(id)=>{const l=byId[id];if(!l)return P.notfound();const c=chap(l.chapter),i=c.lessons.indexOf(id);
     const all=LS.map(x=>x.id),gi=all.indexOf(id),prev=all[gi-1],next=all[gi+1];
@@ -46,16 +46,13 @@
     art.append(h('span',{class:'label',style:'color:var(--bh-ink-2)'},`Kapitel ${c.no}.${i+1} · ${c.title}`),h('h2',{},l.title));
     const content=h('div',{html:l.html});
     content.querySelectorAll('a.xref').forEach(a=>{if(/^#\//.test(a.getAttribute('href')||''))return;a.replaceWith(h('span',{class:'ref'},a.textContent||''));}); // nur interne Lektionslinks behalten
+    content.querySelectorAll('table').forEach(t=>{const hs=[...t.querySelectorAll('thead th')].map(x=>x.textContent.trim());if(!hs.length)return;t.classList.add('stack');t.querySelectorAll('tbody tr').forEach(tr=>[...tr.children].forEach((td,i)=>hs[i]&&td.setAttribute('data-l',hs[i])));});
     content.querySelectorAll('.box').forEach(b=>{if(/Prüfhinweis/i.test(b.querySelector('.lab')?.textContent||''))b.classList.add('pruef');});
     art.append(content);
     l.figures.forEach(f=>art.append(h('figure',{},h('img',{src:'figs/'+f.key+'.svg',alt:f.caption,loading:'lazy'}),h('figcaption',{},'Abb. · '+f.caption))));
     D['worked-examples'].examples.filter(e=>e.lesson===id&&!l.html.includes(e.text.slice(0,40))).forEach(e=>art.append(h('div',{class:'box bsp'},h('div',{class:'lab'},'Beispiel: '+e.title),h('p',{},e.text))));
-    const lv=(D.localVideos||{})[id], yv=vids.filter(v=>(v.lessons||[]).includes(id));
-    if(lv||yv.length){const sec=h('section',{class:'lvideos'},h('span',{class:'label'},'Videos zu dieser Lektion'));
-      if(lv){const ve=h('video',{controls:true,preload:'none',playsinline:true,poster:lv.poster||null,style:'width:100%;display:block;background:#000'},h('source',{src:lv.mp4,type:'video/mp4'}),lv.vtt?h('track',{kind:'subtitles',src:lv.vtt,srclang:'de',label:'Deutsch',default:true}):null);
-        ve.addEventListener('error',()=>ve.closest('.panel')?.remove(),true);
-        sec.append(h('div',{class:'panel'},h('span',{class:'label'},'Lernvideo · lokal · aus Kursinhalten erstellt'),ve));}
-      if(yv.length)sec.append(h('div',{class:'grid grid--2'},yv.map(UI.video)));art.append(sec);}
+    const ov=UI.ownVideo(id);
+    if(ov)art.insertBefore(h('section',{class:'lvideo'},h('span',{class:'label'},`Lernvideo zur Lektion · ${UI.dur(LV[id].duration)} · Untertitel Deutsch`),ov),art.children[2]||null);
     const s=l.sources||{};art.append(h('p',{class:'srcline'},'QUELLEN · Buch v3 S. '+(s.book?.originalPage??'–')+(s.book?.note?' · '+s.book.note:'')+(s.slides?.length?' · Folien '+s.slides.join(', '):'')+(s.kummer?.length?' · Kummer S. '+s.kummer.map(k=>k.page??k).join(', '):'')));
     const items_=items.filter(x=>x.chapter===l.chapter&&(x.slides||[]).some(sl=>(s.slides||[]).includes(sl))).slice(0,2);
     const quick=items_.length?h('section',{class:'sec'},h('span',{class:'label'},'Kurz prüfen'),items_.map(x=>UI.practiceCard(x))):null;
@@ -118,11 +115,14 @@
         h('p',{class:'label'},`Folien ${s.slides.join(', ')} · Kummer S. ${s.kummer.join(', ')} · Lerntraining ${s.trainingTasks.join(', ')}`),
         h('div',{class:'row'},h('a',{class:'btn btn--ghost',href:'#/kapitel/'+s.chapter},'Zum Kapitel'),h('a',{class:'btn btn--ghost',href:'#/ueben/'+s.chapter},'Üben')));})];};
 
-  P.videos=()=>[h('span',{class:'label'},`${vids.length} Videos · geprüft am ${D.videos.verifiedOn} · ${D.videos.method}`),h('h1',{},'Videos'),
-    CH.map(c=>{const vs=vids.filter(v=>v.chapters.includes(c.id));if(!vs.length)return null;
-      return h('section',{class:'sec',id:'v-'+c.id},h('span',{class:'label'},`Kapitel ${String(c.no).padStart(2,'0')} · ${vs.length} Video${vs.length>1?'s':''}`),h('h2',{style:'font-size:32px'},c.title),
-        h('div',{class:'grid grid--2'},vs.map(v=>{const n=UI.video(v);n.querySelector('.note').after(h('p',{class:'label'},(v.lessons&&v.lessons.length?'Lektionen: '+v.lessons.map(x=>{const L=byId[x];return L?x.replace(/^k0?(\d+)-l0?(\d+)$/,'$1.$2')+' '+L.title:x;}).join(' · '):'Kapitel: '+v.chapters.map(UI.chapterLabel).join(', '))));return n;})));}),
-    h('div',{class:'gap'},h('span',{class:'label'},'Lücken'),h('p',{},D.videos.gaps))];
+  function vidCard(lid){const l=byId[lid],c=chap(l.chapter),k=c.lessons.indexOf(lid)+1,v=LV[lid];
+    return h('a',{class:'card vcard',href:'#/lektion/'+lid},v.poster?h('img',{src:v.poster,alt:'',loading:'lazy',class:'vposter'}):null,
+      h('span',{class:'label'},`${c.no}.${k} · ${UI.dur(v.duration)}`),h('h3',{},l.title));}
+  P.videos=()=>{const n=Object.keys(LV).length,tot=Object.values(LV).reduce((a,v)=>a+(v.duration||0),0);
+    return [h('span',{class:'label'},`${n} eigene Lernvideos · ${Math.round(tot/60)} min · deutsche Untertitel · lokal gespeichert`),h('h1',{},'Videos'),
+      h('p',{class:'note'},'Jedes Video gehört zu einer Lektion und erklärt deren Inhalt. Klick öffnet die Lektion mit Video, Text und Übungen.'),
+      CH.map(c=>{const vs=c.lessons.filter(x=>LV[x]);if(!vs.length)return null;
+        return h('section',{class:'sec',id:'v-'+c.id},h('span',{class:'label'},`Kapitel ${String(c.no).padStart(2,'0')} · ${vs.length} Videos`),h('h2',{style:'font-size:32px'},c.title),h('div',{class:'grid'},vs.map(vidCard)));})];};
   P.glossary=()=>{const f=h('input',{class:'inp',type:'search',placeholder:'Begriff filtern …','aria-label':'Glossar filtern'});
     const list=h('div',{});const draw=()=>{const q=f.value.toLowerCase();list.innerHTML='';
       list.append(h('table',{class:'data stack'},h('thead',{},h('tr',{},h('th',{},'Begriff'),h('th',{},'Definition'),h('th',{},'Kapitel'))),h('tbody',{},D.glossary.terms.filter(t=>(t.term+t.definition).toLowerCase().includes(q)).map(t=>h('tr',{},h('td',{style:'font-weight:600','data-l':'Begriff'},t.term),h('td',{'data-l':'Definition'},t.definition),h('td',{class:'label','data-l':'Kapitel'},t.chapters.map(c=>UI.chapterLabel(c)).join(', ')))))));};
@@ -133,9 +133,9 @@
   P.progress=()=>{const st=Store.state,tests=st.tests.slice().reverse();
     const file=h('input',{type:'file',accept:'application/json',hidden:true,onchange:async e=>{try{Store.import(await e.target.files[0].text());App.render();}catch(err){alert('Import fehlgeschlagen: '+err.message);}}});
     return [h('span',{class:'label'},'Lokal gespeichert · localStorage „uss.v1“ · Datenmodell v'+st.version),h('h1',{},'Fortschritt'),
-      h('table',{class:'data'},h('thead',{},h('tr',{},['Kapitel','Lektionen','Übungen richtig','Karteikarten fällig',''].map(x=>h('th',{},x)))),
-        h('tbody',{},CH.map(c=>{const s=chapStats(c);return h('tr',{},h('td',{},`${c.no}. ${c.title}`),h('td',{},`${s.done}/${s.ls}`,bar(pct(s.done,s.ls))),h('td',{},`${s.ok}/${s.its}`,bar(pct(s.ok,s.its))),h('td',{},String(s.due)),h('td',{},h('a',{href:'#/kapitel/'+c.id},'Öffnen')));}))),
-      h('section',{class:'sec'},h('span',{class:'label'},'Probeklausuren'),tests.length?h('table',{class:'data'},h('thead',{},h('tr',{},['Datum','Variante','Punkte','Note','Dauer',''].map(x=>h('th',{},x)))),
+      h('table',{class:'data stack'},h('thead',{},h('tr',{},['Kapitel','Lektionen','Übungen richtig','Karteikarten fällig',''].map(x=>h('th',{},x)))),
+        h('tbody',{},CH.map(c=>{const s=chapStats(c);return h('tr',{},h('td',{'data-l':'Kapitel'},`${c.no}. ${c.title}`),h('td',{'data-l':'Lektionen'},`${s.done}/${s.ls}`,bar(pct(s.done,s.ls))),h('td',{'data-l':'Übungen richtig'},`${s.ok}/${s.its}`,bar(pct(s.ok,s.its))),h('td',{'data-l':'Karteikarten fällig'},String(s.due)),h('td',{},h('a',{href:'#/kapitel/'+c.id},'Öffnen')));}))),
+      h('section',{class:'sec'},h('span',{class:'label'},'Probeklausuren'),tests.length?h('table',{class:'data stack'},h('thead',{},h('tr',{},['Datum','Variante','Punkte','Note','Dauer',''].map(x=>h('th',{},x)))),
         h('tbody',{},tests.map((t,i)=>h('tr',{},h('td',{},new Date(t.date).toLocaleString('de-AT')),h('td',{},t.mode==='auto'?'Auto (30 Items)':'K01–K10'),h('td',{},String(t.points).replace('.',',')+' / 100'),h('td',{},t.grade+' '+t.gradeLabel),h('td',{},Math.round(t.seconds/60)+' min'),h('td',{},h('a',{href:'#/ergebnis/'+(st.tests.length-1-i)},'Review')))))):h('p',{class:'note'},'Noch keine Probeklausur.')),
       h('section',{class:'sec row'},h('button',{type:'button',class:'btn btn--ghost',onclick:()=>{const a=h('a',{href:URL.createObjectURL(new Blob([Store.export()],{type:'application/json'})),download:'fortschritt-uss.v1.json'});document.body.append(a);a.click();a.remove();}},'Exportieren'),
         h('button',{type:'button',class:'btn btn--ghost',onclick:()=>file.click()},'Importieren'),file,

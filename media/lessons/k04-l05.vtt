@@ -1,0 +1,146 @@
+WEBVTT
+
+1
+00:00:00.100 --> 00:00:03.448
+Verkehrsfluss, Dichte und Geschwindigkeit.
+
+2
+00:00:04.156 --> 00:00:08.548
+Schematisches Fundamentaldiagramm: Der Durchsatz steigt bis zu einer
+
+3
+00:00:08.548 --> 00:00:12.036
+Kapazitätsgrenze und sinkt im stark gestauten Zustand.
+
+4
+00:00:11.986 --> 00:00:14.720
+Keine empirische Kalibrierung.
+
+5
+00:00:14.720 --> 00:00:19.708
+Die Verkehrsmenge zählt Fahrzeug- beziehungsweise Fußgängerbewegungen je
+
+6
+00:00:19.708 --> 00:00:20.332
+Zeitraum.
+
+7
+00:00:20.332 --> 00:00:25.576
+An einem Querschnitt heißt sie Verkehrsstärke beziehungsweise Verkehrsfluss q,
+
+8
+00:00:25.576 --> 00:00:27.324
+etwa Fahrzeuge pro Stunde.
+
+9
+00:00:27.324 --> 00:00:32.207
+Die Verkehrsdichte k zählt Fahrzeuge auf einer Strecke zu einem Zeitpunkt,
+
+10
+00:00:32.207 --> 00:00:34.121
+etwa Fahrzeuge pro Kilometer.
+
+11
+00:00:34.121 --> 00:00:37.233
+Fluss ist zeit-, Dichte raumbezogen.
+
+12
+00:00:37.996 --> 00:00:40.472
+q ist gleich k mal v.
+
+13
+00:00:40.422 --> 00:00:42.448
+Mit q in Fahrzeuge pro Stunde,
+
+14
+00:00:42.448 --> 00:00:46.973
+k in Fahrzeuge pro Kilometer und der passenden räumlichen mittleren
+
+15
+00:00:46.973 --> 00:00:49.810
+Geschwindigkeit v in Kilometer pro Stunde.
+
+16
+00:00:49.810 --> 00:00:53.521
+Gilt für konsistent abgegrenzte Verkehrsströme.
+
+17
+00:00:54.292 --> 00:01:00.408
+Bei k ist gleich 20 Fahrzeuge pro Kilometer und v ist gleich 60 Kilometer pro
+
+18
+00:01:00.408 --> 00:01:04.776
+Stunde beträgt q ist gleich 1.200 Fahrzeuge pro Stunde.
+
+19
+00:01:04.726 --> 00:01:08.736
+Die Einheit kürzt sich korrekt zu Fahrzeugen pro Stunde.
+
+20
+00:01:08.736 --> 00:01:14.580
+Aus q ist gleich 900 Fahrzeuge pro Stunde und k ist gleich 30 Fahrzeuge pro
+
+21
+00:01:14.580 --> 00:01:18.710
+Kilometer folgt v ist gleich 30 Kilometer pro Stunde.
+
+22
+00:01:19.468 --> 00:01:24.197
+Im frei fließenden Verkehr kann mehr Dichte zunächst den Durchsatz erhöhen.
+
+23
+00:01:24.147 --> 00:01:27.871
+Bei zunehmender Dichte sinkt jedoch die Geschwindigkeit.
+
+24
+00:01:27.871 --> 00:01:32.176
+Hinter der Kapazitätsgrenze kann der Fluss trotz noch höherer Dichte
+
+25
+00:01:32.176 --> 00:01:32.936
+zurückgehen.
+
+26
+00:01:32.936 --> 00:01:36.925
+Im stehenden Stau befinden sich viele Fahrzeuge auf der Strecke,
+
+27
+00:01:36.925 --> 00:01:39.980
+aber es passieren kaum Fahrzeuge den Querschnitt.
+
+28
+00:01:40.732 --> 00:01:44.770
+Die einfache Beziehung verlangt zusammenpassende Messungen.
+
+29
+00:01:44.720 --> 00:01:49.049
+Ein arithmetischer Mittelwert zufällig gemessener Einzelgeschwindigkeiten ist
+
+30
+00:01:49.049 --> 00:01:52.872
+nicht in jedem Fall die richtige räumliche mittlere Geschwindigkeit.
+
+31
+00:01:52.872 --> 00:01:57.614
+In der Klausur reicht bei vorgegebenen konsistenten Größen normalerweise die
+
+32
+00:01:57.614 --> 00:02:00.671
+Einheitenprüfung und die korrekte Interpretation.
+
+33
+00:02:01.420 --> 00:02:06.274
+Kapazität ist kein absolut unveränderlicher Wert: Witterung, Fahrzeugmix,
+
+34
+00:02:06.274 --> 00:02:11.526
+Baustellen, Abstände und Steuerung können den erreichbaren Durchsatz verändern.
+
+35
+00:02:11.476 --> 00:02:14.331
+Telematik kann die Nutzung stabilisieren,
+
+36
+00:02:14.331 --> 00:02:17.883
+erzeugt aber keine unbegrenzte physische Kapazität.
+
